@@ -24,5 +24,3 @@ console.log(newObj[keyTwo]);
 
 const keyThree = 'price';
 console.log(newObj[keyThree]);
-
-// конец
