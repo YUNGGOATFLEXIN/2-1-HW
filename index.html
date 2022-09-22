@@ -4,8 +4,36 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Form-test</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/main.js" defer></script>
     </head>
-    <script src="./js/main.js"></script>
-    <body></body>
+    <body>
+        <form action="send.html" method="post" class="form">
+            <fieldset class="form__border">
+                <legend class="form__legend">Авторизация</legend>
+                <label for="login" class="form__label">Логин</label>
+                <input
+                    type="text"
+                    id="login"
+                    placeholder="Введите ваше имя"
+                    required
+                    class="form__input"
+                />
+                <label for="password" class="form__label">Пароль</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Введите ваш пароль"
+                    required
+                    class="form__input"
+                />
+                <button class="form__btn" type="submit" id="submit-button">
+                    Войти
+                </button>
+            </fieldset>
+        </form>
+
+        <div id="root"></div>
+    </body>
 </html>

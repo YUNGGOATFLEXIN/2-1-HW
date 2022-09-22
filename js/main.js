@@ -25,37 +25,37 @@
 
 // Домашнее задание №3
 
-const arr = [1, 2, 3, 4, 5, 6];
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-};
+// const arr = [1, 2, 3, 4, 5, 6];
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// };
 
-const sayHello = () => {
-    let name = prompt('Как тебя зовут?');
-    alert(`Привет, ${name}`)
-};
+// const sayHello = () => {
+//     let name = prompt('Как тебя зовут?');
+//     alert(`Привет, ${name}`)
+// };
 
-sayHello();
+// sayHello();
 
-const getAge = () => {
-    let age = prompt('Сколько вам лет?', '');
+// const getAge = () => {
+//     let age = prompt('Сколько вам лет?', '');
 
-    age < 5 ? alert('Вы младенец') :
-    age > 5 && age < 10 ? alert('Вы ребенок') :
-    age > 10 && age < 18 ? alert('Вы подросток') :
-    age > 18 && age < 65 ? alert('Вы взрослый') :
-    alert('Вы старик');
-};
+//     age < 5 ? alert('Вы младенец') :
+//     age > 5 && age < 10 ? alert('Вы ребенок') :
+//     age > 10 && age < 18 ? alert('Вы подросток') :
+//     age > 18 && age < 65 ? alert('Вы взрослый') :
+//     alert('Вы старик');
+// };
 
-getAge();
+// getAge();
 
-const getNum = () => {
-    let num = prompt('Назовите любое число от 3 до 5', '');
+// const getNum = () => {
+//     let num = prompt('Назовите любое число от 3 до 5', '');
 
-    num % 3 == 0 && num % 5 == 0 ? alert('FizzBuzz') :
-    num % 3 == 0 ? alert('Fizz') :
-    num % 5 == 0 ? alert('Buzz') :
-    alert('Выберите теперь 3 или 5 или и 3 и 5 одновременно');
-};
+//     num % 3 == 0 && num % 5 == 0 ? alert('FizzBuzz') :
+//     num % 3 == 0 ? alert('Fizz') :
+//     num % 5 == 0 ? alert('Buzz') :
+//     alert('Выберите теперь 3 или 5 или и 3 и 5 одновременно');
+// };
 
-getNum();
+// getNum();
