@@ -65,21 +65,68 @@
 
 // Домашнее задание №4
 
-const button = document.querySelector('.form__btn');
+// const button = document.querySelector('.form__btn');
 
-button.addEventListener('click', (e) => {
-    e.preventDefault();
+// button.addEventListener('click', (e) => {
+//     e.preventDefault();
 
-    const password = document.getElementById('password');
-    const login = document.getElementById('login');
+//     const password = document.getElementById('password');
+//     const login = document.getElementById('login');
 
-    if (password.value + login.value == '') {
-        alert('Введите ваши данные для входа');
-    } else if (login.value == '') {
-        alert('Введите ваш логин');
-    } else if (password.value == '') {
-        alert('Введите ваш пароль')
-    } else if (login.value && password.value != '') {
-        alert(`Ваш логин: ${login.value}. Ваш пароль: ${password.value}.`)
-    };
-});
+//     if (password.value + login.value == '') {
+//         alert('Введите ваши данные для входа');
+//     } else if (login.value == '') {
+//         alert('Введите ваш логин');
+//     } else if (password.value == '') {
+//         alert('Введите ваш пароль')
+//     } else if (login.value && password.value != '') {
+//         alert(`Ваш логин: ${login.value}. Ваш пароль: ${password.value}.`)
+//     };
+// });
+
+
+// Домашее задание №5
+
+const root = document.getElementById('root');
+
+fetch('https://rickandmortyapi.com/api/character/')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(responseJson){
+        showCharacters(responseJson);
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+const makeElement = (tagName, className) => {
+    const element = document.createElement(tagName);
+    element.classList.add(className);
+    return element;
+}
+
+const showCharacters = (responseObject) => {
+    
+    const character = responseObject.results;
+    console.log(character);
+    character.forEach( ({ image, name, gender }) => {
+        const article = makeElement('article', 'card');
+        const characherImage = makeElement('img', 'character-img');
+        const content = makeElement('div', 'character-info');
+        const title = makeElement('h2', 'character-name');
+        const characterGender = makeElement('span', 'character-gender');
+
+        characherImage.src = image;
+        title.textContent = name;
+        characterGender.textContent = gender;
+
+        content.appendChild(title);
+        content.appendChild(characterGender);
+
+        article.appendChild(characherImage);
+        article.appendChild(content)
+
+        root.appendChild(article);
+    });
+}
