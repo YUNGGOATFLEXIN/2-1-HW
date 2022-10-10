@@ -87,46 +87,121 @@
 
 // Домашее задание №5
 
-const root = document.getElementById('root');
+// const root = document.getElementById('root');
 
-fetch('https://rickandmortyapi.com/api/character/')
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(responseJson){
-        showCharacters(responseJson);
-    })
-    .catch(function(error){
-        console.log(error);
-    })
+// fetch('https://rickandmortyapi.com/api/character/')
+//     .then(function(response){
+//         return response.json();
+//     })
+//     .then(function(responseJson){
+//         showCharacters(responseJson);
+//     })
+//     .catch(function(error){
+//         console.log(error);
+//     })
 
-const makeElement = (tagName, className) => {
-    const element = document.createElement(tagName);
-    element.classList.add(className);
-    return element;
-}
+// const makeElement = (tagName, className) => {
+//     const element = document.createElement(tagName);
+//     element.classList.add(className);
+//     return element;
+// }
 
-const showCharacters = (responseObject) => {
+// const showCharacters = (responseObject) => {
     
-    const character = responseObject.results;
-    console.log(character);
-    character.forEach( ({ image, name, gender }) => {
-        const article = makeElement('article', 'card');
-        const characherImage = makeElement('img', 'character-img');
-        const content = makeElement('div', 'character-info');
-        const title = makeElement('h2', 'character-name');
-        const characterGender = makeElement('span', 'character-gender');
+//     const character = responseObject.results;
+//     console.log(character);
+//     character.forEach( ({ image, name, gender }) => {
+//         const article = makeElement('article', 'card');
+//         const characherImage = makeElement('img', 'character-img');
+//         const content = makeElement('div', 'character-info');
+//         const title = makeElement('h2', 'character-name');
+//         const characterGender = makeElement('span', 'character-gender');
 
-        characherImage.src = image;
-        title.textContent = name;
-        characterGender.textContent = gender;
+//         characherImage.src = image;
+//         title.textContent = name;
+//         characterGender.textContent = gender;
 
-        content.appendChild(title);
-        content.appendChild(characterGender);
+//         content.appendChild(title);
+//         content.appendChild(characterGender);
 
-        article.appendChild(characherImage);
-        article.appendChild(content)
+//         article.appendChild(characherImage);
+//         article.appendChild(content)
 
-        root.appendChild(article);
-    });
-}
+//         root.appendChild(article);
+//     });
+// }
+
+
+// Домашнее задание №6
+
+// 1
+// const arr = ['1', '2', '3', '4'];
+
+// const newArray = arr.filter((item) => item === '3');
+
+// console.log(newArray);
+
+
+// 2
+// const peopleList = [
+//     {
+//       name: 'Max',
+//       age: 25,
+//       id: 1,
+//     },
+//     {
+//       name: 'Nik',
+//       age: 30,
+//       id: 3,
+//     },
+//     {
+//       name: 'Jack',
+//       age: 32,
+//       id: 4
+//     },
+//     {
+//       name: 'Harry',
+//       age: 10,
+//       id: 5
+//     }
+//   ];
+
+// const result = peopleList.filter((person) => person.id > 2);
+
+// console.log(result);
+
+// 3
+
+// fetch('https://rickandmortyapi.com/api/character/')
+//     .then(function(response){
+//         return response.json();
+//     })
+//     .then(function(responseJson){
+//         showCharacters(responseJson);
+//     })
+//     .catch(function(error){
+//         console.log(error);
+//     });
+
+// const showCharacters = (responseObject) => {
+    
+// const character = responseObject.results;
+
+// const newArray = character.filter((item) => item.id > 5 && item.id < 20);
+
+// console.log(newArray);
+
+// };
+
+
+// 4
+
+// const obj = {
+//     name: 'Jacob',
+//     age: 20,
+//     id: 1
+//   };
+
+// Object.entries(obj).forEach(([key, value]) => {
+//     alert(`${key}, ${value}`);
+// });
